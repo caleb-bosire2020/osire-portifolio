@@ -14,10 +14,12 @@ body{
 }
 html{
     transition: all 300ms;
+    scroll-behavior: smooth;
 }
 .wrapper{
     width: 100%;
     height: 100%;
+    padding-bottom: 100px;
 
     .home{
         width: 100%;
@@ -445,22 +447,22 @@ html{
 
     .project-section{
         width: 100%;
-
+        padding-bottom: 50px;
         .title{
             text-align: center;
-                font-size: 2rem;
-                color: blue;
-                padding: .8rem auto;
-                @media only screen and(min-width: 426px){
-                    font-size: 4rem;
-                    color: orangered;
+            font-size: 2rem;
+            color: blue;
+            padding: .8rem auto;
+            @media only screen and(min-width: 426px){
+                font-size: 4rem;
+                color: orangered;
 
-                }
-                @media only screen and(min-width: 769px){
-                    font-size: 6rem;
-                    color: orangered;
+            }
+            @media only screen and(min-width: 769px){
+                font-size: 6rem;
+                color: orangered;
 
-                }
+            }
         }
         .container-projects{
                 width: 92%;
@@ -523,6 +525,176 @@ html{
                         
                     }
                 }
+            }
+        }
+    }
+
+    // styles for contact page
+    .contact-page{
+        width: 100%;
+        @media only screen and (min-width: 426px){
+            width: 90%;
+            margin: 10px auto;
+        }
+        @media only screen and (min-width: 769px){
+            width: 90%;
+            margin: 10px auto;
+        }
+        @media only screen and (min-width: 1025px){
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .title{
+            text-align: center;
+            font-size: 2rem;
+            color: blue;
+            padding: .8rem auto;
+            @media only screen and(min-width: 426px){
+                font-size: 4rem;
+                color: orangered;
+
+            }
+            @media only screen and(min-width: 769px){
+                font-size: 6rem;
+                color: orangered;
+
+            }
+        }
+        p{
+            text-align: center;
+            line-height: 1.5rem;
+            color: grey;
+            width: 94%;
+            margin: 10px auto;
+        }
+
+        .contact-container{
+            width: 94%;
+            margin: 5px auto;
+            padding: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+            grid-gap: 10px;
+
+            .left{
+                width: 96%;
+                margin: 10px auto;
+                background: whitesmoke;
+                padding-bottom: 20px;
+               
+               .info{
+                   padding: 10px 20px;
+                   font-size: 1.5rem;
+               }
+
+               .display{
+                   width: 94%;
+                   margin: 10px auto;
+                   
+
+                   .main-link{
+                       width: 100%;
+                       box-shadow: 0 0 3px 2px rgba(0, 0, 0, .2);
+                       display: flex;
+                       align-items: center;
+                       margin-top: 20px;
+                       
+                       .image{
+                           width: 40px;
+                           height: 40px;
+                           display: grid;
+                           place-items: center;
+
+                           a{
+                               i{
+                                   font-size: 25px;
+                               }
+                           }
+                       }
+                       .text{
+                           width: 100%;
+                           a{
+                               p{
+                                   text-align: left;
+                                   line-height: 1rem;
+                                   padding-left: 5px;
+                               }
+                           }
+                       }
+                   }
+               }
+            }
+
+            .right{
+                width: 96%;
+                margin: 10px auto;
+                background: whitesmoke;
+                padding-bottom: 20px;
+
+               .form{
+                    padding: 10px 20px;
+                    font-size: 1.5rem;
+               }
+
+               .form-container{
+                    width: 94%;
+                    margin: 10px auto;
+
+                    form{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .form-group{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 15px;
+                            span{
+                                padding-bottom: 5px;
+                                font-size: 14px;
+                            }  
+                            input{
+                                padding: .4rem .8rem;
+                                outline: none;
+                            }
+                            textarea{
+                                padding: .4rem .8rem;
+                                outline: none;
+                            }
+                        }
+                        .btns{
+                            display: flex;
+                            margin: 20px auto;
+                            justify-content: center;
+                            align-items: center;
+                            input[type="reset"]{
+                                outline: none;
+                                background: orangered;
+                                border: none;
+                            }
+                            input[type="submit"]{
+                                outline: none;
+                                background: green;
+                                border: none;
+                            }
+                            input{
+                                margin: 5px 10px;
+                                border-radius: 3px;
+                                color: white;
+                                padding: .8rem 1rem;
+                            }
+                        }
+                    }
+                    p{
+                        font-style: italic;
+                        font-size: 14px;
+                        font-weight: 500px;
+                    }
+               }
             }
         }
     }
