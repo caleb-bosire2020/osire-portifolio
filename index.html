@@ -9,13 +9,16 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="loader" id="loader">
+        <p>calebosire...</p>
+    </div>
     <div class="wrapper">
         <div class="home" id="Home"> 
             <div class="header">
                 <div class="logo">
                     <img src="images/logo/seku.jpeg" alt="logo" srcset="" height="50px">
                 </div>
-                <div class="links">
+                <div class="links" id="menu" >
                     <ul class="list-container">
                         <li><a href="#Home">Home</a></li>
                         <li><a href="#About">About</a></li>
@@ -24,14 +27,14 @@
                         <li><a href="#Contacts">Contacts</a></li>
                     </ul>
                 </div>
-                <div class="menu">
-                    <i class="fa fa-bars"></i>
+                <div class="menu" >
+                    <i class="fa fa-bars" onclick="openMenu()"></i>
                 </div>
             </div>
             <div class="body">
                 <div class="left">
                     <h1 class="title">Caleb Obegi Bosire</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo aliquam hic maiores cupiditate quibusdam in ex vel! Debitis corporis, fuga eum quo delectus a esse porro quos molestiae error dolorem.</p>
+                <p id="myInfo"> </p>
                     <button class="btn"><a href="">Get started</a></button>
                 </div>
                 <div class="right">

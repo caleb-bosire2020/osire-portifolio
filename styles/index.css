@@ -21,6 +21,70 @@ html {
   scroll-behavior: smooth;
 }
 
+.loader {
+  width: 100%;
+  height: 100vh;
+  background: blue;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  visibility: visible;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.loader p {
+  color: white;
+  font-size: 2rem;
+  -webkit-animation: changecolor 5s ease infinite;
+          animation: changecolor 5s ease infinite;
+}
+
+@-webkit-keyframes changecolor {
+  0% {
+    color: #0af80a;
+  }
+  25% {
+    color: #fa06fa;
+  }
+  50% {
+    color: orangered;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: #04e8f8;
+  }
+}
+
+@keyframes changecolor {
+  0% {
+    color: #0af80a;
+  }
+  25% {
+    color: #fa06fa;
+  }
+  50% {
+    color: orangered;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: #04e8f8;
+  }
+}
+
+.hideloader {
+  z-index: -1000;
+  visibility: hidden;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -87,6 +151,26 @@ html {
       -ms-flex-align: center;
           align-items: center;
   display: none;
+  -webkit-animation: righteffect .5s ease forwards;
+          animation: righteffect .5s ease forwards;
+}
+
+@-webkit-keyframes righteffect {
+  from {
+    right: -280px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes righteffect {
+  from {
+    right: -280px;
+  }
+  to {
+    right: 0px;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -128,6 +212,37 @@ html {
 @media only screen and (min-width: 769px) {
   .wrapper .home .header .links .list-container li a::hoover {
     color: orangered;
+  }
+}
+
+.wrapper .home .header .showlinks {
+  width: 280px;
+  height: calc(100vh - 50px);
+  background-color: #1b1bfc;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: righteffect .5s ease forwards;
+          animation: righteffect .5s ease forwards;
+}
+
+@keyframes righteffect {
+  from {
+    right: -280px;
+  }
+  to {
+    right: 0px;
   }
 }
 
