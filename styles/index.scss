@@ -399,6 +399,17 @@ html{
                         border-radius: 3px;
                         margin-left: 5px;
                         &:nth-child(1){
+                            background:rgb(76, 76, 228);
+                        }
+                        &:nth-child(2){
+                            background:rgb(224, 135, 103);
+                        }
+                        &:nth-child(3){
+                            background:rgb(163, 160, 160);
+                        }
+                    }
+                    .active{
+                        &:nth-child(1){
                             background:blue;
                         }
                         &:nth-child(2){
@@ -415,6 +426,13 @@ html{
                     background: whitesmoke;
                     margin-bottom: 20px;
                     padding-bottom: .2rem .2rem;
+                    .content{
+                        width: 100%;
+                        display: none;
+                    }
+                    .active{
+                        display: block;
+                    }
                 }
             }
         }

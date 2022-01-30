@@ -547,14 +547,26 @@ html {
 }
 
 .wrapper .about-section .main-display .section-right .top-btn a:nth-child(1) {
-  background: blue;
+  background: #4c4ce4;
 }
 
 .wrapper .about-section .main-display .section-right .top-btn a:nth-child(2) {
-  background: orangered;
+  background: #e08767;
 }
 
 .wrapper .about-section .main-display .section-right .top-btn a:nth-child(3) {
+  background: #a3a0a0;
+}
+
+.wrapper .about-section .main-display .section-right .top-btn .active:nth-child(1) {
+  background: blue;
+}
+
+.wrapper .about-section .main-display .section-right .top-btn .active:nth-child(2) {
+  background: orangered;
+}
+
+.wrapper .about-section .main-display .section-right .top-btn .active:nth-child(3) {
   background: grey;
 }
 
@@ -563,6 +575,15 @@ html {
   background: whitesmoke;
   margin-bottom: 20px;
   padding-bottom: .2rem .2rem;
+}
+
+.wrapper .about-section .main-display .section-right .bottom-display .content {
+  width: 100%;
+  display: none;
+}
+
+.wrapper .about-section .main-display .section-right .bottom-display .active {
+  display: block;
 }
 
 .wrapper .service-section {
