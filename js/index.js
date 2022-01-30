@@ -40,3 +40,61 @@ divContainer.addEventListener("click", function(e){
         currentDisplay.classList.add("active"); 
     }
 });
+
+// service page javascript
+
+const serviceDisplay = document.getElementById("containerService");
+const singleCards = [
+    {
+        id: 1,
+        image :"../images/logo/seku.jpeg",
+        text : "Content is the information and experiences; directed at an end-user or audience in publishing, art, and communication. Content is delivered via different media including, the Internet, cinema, television, radio, smartphones, audio CDs, books, e-books, magazines, and live events.",
+        button : "https://google.com",     
+    },
+
+    {
+        id: 1,
+        image :"../images/logo/seku.jpeg",
+        text : "Content is the information and experiences; directed at an end-user or audience in publishing, art, and communication. Content is delivered via different media including, the Internet, cinema, television, radio, smartphones, audio CDs, books, e-books, magazines, and live events.",
+        button : "https://google.com",     
+    },
+
+    {
+        id: 1,
+        image :"../images/logo/seku.jpeg",
+        text : "Content is the information and experiences; directed at an end-user or audience in publishing, art, and communication. Content is delivered via different media including, the Internet, cinema, television, radio, smartphones, audio CDs, books, e-books, magazines, and live events.",
+        button : "https://google.com",     
+    },
+];
+
+// function to load data through mapping
+function displayServiceCard(singleItem){
+    let singleCard = singleItem.map(function(item){
+        return `
+        <div class="card">
+            <div class="top-display">
+                <div class="image">
+                    <img src=${item.image} alt="card image" height="100px">
+                </div>
+                <div class="text">
+                    <p>${item.text}</p>
+                </div>
+            </div>
+            <div class="bottom-btn">
+                <a href="${item.button}">View</a>
+            </div>
+        </div>
+        `;
+    });
+
+    singleCard = singleCard.join("");
+    serviceDisplay.innerHTML = singleCard;
+
+}
+window.addEventListener("DOMContentLoaded", function(){
+    displayServiceCard(singleCards);
+
+});
+
+// project gae javascript
+
